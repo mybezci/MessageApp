@@ -1,5 +1,4 @@
-﻿using System;
-using MessageApp.Hubs;
+﻿using MessageApp.Hubs;
 
 namespace MessageApp;
 
@@ -7,6 +6,12 @@ public class Startup
 {
     public void ConfigureServices(IServiceCollection services)
     {
+        services.AddCors(options => options.AddDefaultPolicy(policy => 
+            policy.AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials()
+                .SetIsOriginAllowed(origin => true)
+            ));
         services.AddSignalR();
     }
 
@@ -16,6 +21,8 @@ public class Startup
         {
             app.UseDeveloperExceptionPage();
         }
+
+        app.UseCors();
         
         app.UseRouting();
         app.UseEndpoints(endpoints =>

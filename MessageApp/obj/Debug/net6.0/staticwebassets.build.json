@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6DZRRVJ/9CkKqXu5FaPxu0Tz48/zGw3z9C0DKFK2VFI=",
+  "Hash": "tatmR4siYdcc+xpyfujLJkombRtF2IHP2XGuiOyIIlw=",
   "Source": "MessageApp",
   "BasePath": "_content/MessageApp",
   "Mode": "Default",
@@ -26,6 +26,8 @@
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",

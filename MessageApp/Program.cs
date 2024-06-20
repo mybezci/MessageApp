@@ -26,8 +26,8 @@ namespace MessageApp
                 {
                     builder.UseStartup<Startup>();
                     builder.UseUrls("http://localhost:5001/");
-                });*/
-        
+                })*/
+
         /* public static void Main(string[] args) =>
             new WebHostBuilder()
                 .UseKestrel()
@@ -37,11 +37,26 @@ namespace MessageApp
                 .UseUrls("http://localhost:5001/")
                 .Build()
                 .Run(); */
+
     }
 }
 
 
-/*using MessageApp.Hubs;
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+using MessageApp.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -52,14 +67,18 @@ var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-    app.UseDeveloperExceptionPage();
+app.UseDeveloperExceptionPage();
 }
 
 app.UseRouting();
 
 app.UseEndpoints(endpoints =>
 {
-    endpoints.MapHub<MyHub>("/myhub");
+endpoints.MapHub<MyHub>("/myhub");
 });
 
-app.Run();*/
+app.Run();
+
+
+*/
+
