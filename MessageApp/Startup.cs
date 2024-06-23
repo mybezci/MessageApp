@@ -1,4 +1,5 @@
-﻿using MessageApp.Hubs;
+﻿using MessageApp.Business;
+using MessageApp.Hubs;
 
 namespace MessageApp;
 
@@ -12,7 +13,9 @@ public class Startup
                 .AllowCredentials()
                 .SetIsOriginAllowed(origin => true)
             ));
+        services.AddTransient<MyBusiness>();
         services.AddSignalR();
+        services.AddControllers();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -28,6 +31,7 @@ public class Startup
         app.UseEndpoints(endpoints =>
         {
             endpoints.MapHub<MyHub>("/myhub");
+            endpoints.MapControllers();
             
         });
     }
