@@ -1,0 +1,12 @@
+﻿### GET request to example server
+GET https://examples.http-client.intellij.net/get
+    ?generated-in=JetBrains Rider
+
+### Get message
+GET https://localhost:5001/api/home/message
+
+### Get clients
+GET https://localhost:5001/clients
+
+### Get clients
+GET http://localhost:5000/clients
